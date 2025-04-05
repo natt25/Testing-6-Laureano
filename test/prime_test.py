@@ -1,6 +1,5 @@
+# test_prime_functions.py
 import unittest
-import sys
-import os
 from prime import isPrime, isPrime2
 
 class TestPrimeFunctions(unittest.TestCase):
@@ -26,6 +25,14 @@ class TestPrimeFunctions(unittest.TestCase):
         self.assertFalse(isPrime2(21)) # 21 no es primo
         self.assertTrue(isPrime2(23))  # 23 es primo
         self.assertFalse(isPrime2(24)) # 24 no es primo
+
+# Agrega un error manualmente al código anterior
+# tal que tus casos de test anteriores no lo detecten.
+# Luego agrega un caso de test más que sí que lo detecte.
+    def test_isPrime_error_case(self):
+        self.assertFalse(isPrime(51))  # 51 no es primo
+        self.assertFalse(isPrime(100)) # 100 no es primo
+        self.assertTrue(isPrime(53))   # 53 es primo
 
 if __name__ == '__main__':
     unittest.main()
